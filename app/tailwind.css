@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+/* Agregar la animación personalizada */
+@layer utilities {
+  .slide-horizontal {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .translate-x-full {
+    transform: translateX(100%);
+  }
+
+  .translate-x-0 {
+    transform: translateX(0);
+  }
+
+  /* Opcional: para un retraso suave entre pasos */
+  .delay-500 {
+    transition-delay: 0.5s;
+  }
+}
