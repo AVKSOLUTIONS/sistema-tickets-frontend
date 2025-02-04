@@ -11,7 +11,7 @@ export default function Index() {
     // Redirigir a la página de login después de completar la carga
     const redirectTimer = setTimeout(() => {
       setFadeOut(true); // Inicia la transición de desvanecimiento
-      setTimeout(() => navigate("/welcome"), 1000); // Redirige después de 1s
+      setTimeout(() => navigate("/Dashboard"), 1000); // Redirige después de 1s
     }, 3000); // Total: 3 segundos
 
     return () => {

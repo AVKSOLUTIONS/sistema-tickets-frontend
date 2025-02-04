@@ -20,9 +20,10 @@
     "isbot": "^4.1.0",
     "lucide-react": "^0.474.0",
     "motion": "^12.0.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-dropzone": "^14.3.5",
+    "remix": "^2.15.3",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
