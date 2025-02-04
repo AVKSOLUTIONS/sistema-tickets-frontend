@@ -1,51 +1,18 @@
-// components/Navbar.jsx
-import { Link } from "@remix-run/react";
+import { Settings, Menu } from "lucide-react";
 
-export default function Navbar() {
+export function Navbar({ toggleSidebar }: { toggleSidebar: () => void }) {
   return (
-    <nav className="bg-white shadow-md py-4 px-6 flex items-center justify-between">
-      {/* Left Side */}
-      <div className="text-xl font-bold text-gray-800"><Link
-            to="/"
-            className="text-gray-700 hover:text-gray-900 transition-colors"
-          >
-            AVK
-          </Link></div>
-
-      {/* Right Side */}
-      <div className="flex justify-between items-center w-1/2">
-        {/* Buttons */}
-        <div className="flex space-x-4">
-          <Link
-            to="/"
-            className="text-gray-700 hover:text-gray-900 transition-colors"
-          >
-            Inicio
-          </Link>
-          <Link
-            to="/acerca"
-            className="text-gray-700 hover:text-gray-900 transition-colors"
-          >
-            Acerca
-          </Link>
-          <Link
-            to="/dashboard"
-            className="text-gray-700 hover:text-gray-900 transition-colors"
-          >
-            Dashboard
-          </Link>
-        </div>
-
-        {/* Profile Image */}
-        <div>
-          <Link
-            to="/CreateAccount"
-            className="text-gray-700 hover:text-gray-900 transition-colors"
-          >
-            <div className="h-10 w-10 rounded-full bg-gray-300"></div>
-          </Link>
+    <header className="w-full flex justify-between items-center p-4 px-6 bg-sky-50 text-slate-800 border border-slate-300 relative md:px-12">
+      <button onClick={toggleSidebar} className="md:hidden p-2 rounded-md text-gray-800 hover:bg-gray-200">
+        <Menu className="w-6 h-6" />
+      </button>
+      <h1 className="text-#0047ba md:text-3xl font-semibold">Dashboard</h1>
+      <div className="flex items-center space-x-4">
+        <Settings className="w-6 h-6 cursor-pointer" />
+        <div className="w-10 h-10 bg-gray-300 rounded-full overflow-hidden">
+          <img src="/descarga.jpg" alt="Perfil" className="w-full h-full object-cover" />
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
